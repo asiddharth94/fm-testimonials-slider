@@ -1,21 +1,26 @@
 var details = document.querySelector('.testimonial-details');
 var avatar = document.querySelector('.testimonial-image > img');
 
-console.log(avatar);
-
 var users = [
     {
         name: 'Tanya Sinclair',
         designation: 'UX Engineer',
         description: `“ I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. ”`,
-        image: './images/image-tanya.jpg'
+        image: './images/image-tanya.jpg',
+        imageAlt: 'Image of a girl'
     },
     {
         name: 'John Tarkpor',
         designation: 'Junior Front-end Developer',
         description: `“ If you want to lay the best foundation possible I'd recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ”`,
-        image: './images/image-john.jpg'
+        image: './images/image-john.jpg',
+        imageAlt: 'Image of a guy'
     }];
+
+function setAvatar(user) {
+    avatar.src = `${user.image}`;
+    avatar.alt = `${user.imageAlt}`;
+}
 
 function previousClicked() {
     var user = users[0];
@@ -23,8 +28,7 @@ function previousClicked() {
                          <footer><p class="user-name"><b>${user.name}</b></p>
                          <p class="user-designation">${user.designation}</p>
                          </footer>`;
-    avatar.src = `${user.image}`;
-    avatar.alt = 'Image of a girl';
+    setAvatar(user);
 }
 
 function nextClicked() {
@@ -33,8 +37,7 @@ function nextClicked() {
                          <footer><p class="user-name"><b>${user.name}</b></p>
                          <p class="user-designation">${user.designation}</p>
                          </footer>`;
-    avatar.src = `${user.image}`;
-    avatar.alt = 'Image of a girl';
+    setAvatar(user);
 }
 
 previousClicked();

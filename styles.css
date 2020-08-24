@@ -51,7 +51,6 @@ footer {
 .testimonial-image {
     position: relative;
     left: -55px;
-    z-index: 1;
 }
 
 .slider {
@@ -67,7 +66,6 @@ footer {
     position: absolute;
     bottom: -3%;
     right: 68%;
-    z-index: 100;
 }
 
 .slider img {
@@ -86,13 +84,14 @@ footer {
 }
 
 .quotes {
-    left: 260px;
-    top: 185px;
+    left: -70%;
+    top: 18%;
 }
 
 .pattern {
-    right: 150px;
-    top: 25px;
+    right: -17%;
+    bottom: -9%;
+    z-index: -1;
 }
 
 .toggle-display {
