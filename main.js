@@ -1,12 +1,7 @@
 var details = document.querySelector('.testimonial-details');
-var avatar = document.querySelector('.testimonial-image');
-var prevIcon = document.querySelector('.prev-icon');
-var nextIcon = document.querySelector('.next-icon');
-var slider = document.querySelector('.slider');
+var avatar = document.querySelector('.testimonial-image > img');
 
-slider.addEventListener('click', function() {
-    console.log('asjdjdkdkdk');
-});
+console.log(avatar);
 
 var users = [
     {
@@ -28,7 +23,8 @@ function previousClicked() {
                          <footer><p class="user-name"><b>${user.name}</b></p>
                          <p class="user-designation">${user.designation}</p>
                          </footer>`;
-    avatar.innerHTML +=  `<img src="${user.image}" alt="Image of a girl" />`;
+    avatar.src = `${user.image}`;
+    avatar.alt = 'Image of a girl';
 }
 
 function nextClicked() {
@@ -37,9 +33,16 @@ function nextClicked() {
                          <footer><p class="user-name"><b>${user.name}</b></p>
                          <p class="user-designation">${user.designation}</p>
                          </footer>`;
-    avatar.innerHTML +=  `<img src="${user.image}" alt="Image of a girl" />`;
+    avatar.src = `${user.image}`;
+    avatar.alt = 'Image of a girl';
 }
 
 previousClicked();
+
+var prevIcon = document.querySelector('.prev-icon');
+var nextIcon = document.querySelector('.next-icon');
+
+prevIcon.addEventListener('click', previousClicked);
+nextIcon.addEventListener('click', nextClicked);
 
 
