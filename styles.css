@@ -45,7 +45,7 @@ footer {
 
 .user-designation {
     padding-left: 5px;
-    color: gray
+    color: gray;
 }
 
 .testimonial-image {
@@ -96,4 +96,66 @@ footer {
 
 .toggle-display {
     display: none;
+}
+
+@media screen and (max-width: 375px) {
+
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .testimonial-image > img:nth-child(2) {
+        width: 250px;
+        margin-left: 100px;
+        margin-bottom: 25px;
+    }
+    
+    .pattern {
+        width: 100%;
+        padding: 15px;
+        right: -15%;
+        bottom: -3%;
+    }
+
+    .quotes {
+        max-height: 3.5rem;
+        top: 105%;
+        left: 55%;
+    }
+
+    .slider {
+        bottom: 3%;
+        right: 25%;
+    }
+
+    .testimonial-details {
+        width: 100%;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        padding: 40px;
+        text-align: center;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer p {
+        margin: 2.5px;
+    }
+
+    .user-designation {
+        padding-left: 0;
+    }
+
+    .curve {
+        width: 100%;
+        max-height: 5rem;
+    }
 }
